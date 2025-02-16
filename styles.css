@@ -1,0 +1,173 @@
+body {
+    font-family: 'Pacifico', cursive;
+    background: linear-gradient(135deg, #ffe6fa, #ffc1e3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    overflow: hidden;
+    position: relative;
+  }
+  
+  .container {
+    text-align: center;
+    background: rgba(255, 245, 250, 0.85);
+    padding: 50px 70px;
+    border-radius: 30px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+    border: 3px dashed #ff69b4;
+    position: relative;
+    z-index: 1;
+    animation: fadeIn 1.5s ease-in-out;
+    backdrop-filter: blur(10px);
+    max-width: 90%;
+    overflow: hidden;
+  }
+  
+  h1 {
+    color: #ff69b4;
+    font-size: 3.5em;
+    margin-bottom: 20px;
+    text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3);
+    animation: float 3s ease-in-out infinite;
+  }
+  
+  .name {
+    color: #ff1493;
+    text-shadow: 2px 2px 5px rgba(255, 20, 147, 0.7);
+  }
+  
+  .message {
+    color: #444;
+    font-size: 1.6em;
+    margin-bottom: 20px;
+    animation: slideIn 1s ease-in-out;
+  }
+  
+  .question {
+    color: #ff69b4;
+    font-size: 2.7em;
+    font-weight: bold;
+    margin-bottom: 30px;
+    animation: fadeIn 2s ease-in-out;
+  }
+  
+  .btn {
+    padding: 20px 45px;
+    font-size: 1.5em;
+    border: none;
+    border-radius: 60px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    box-shadow: 0 7px 15px rgba(0, 0, 0, 0.4);
+  }
+  
+  #yesButton {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    background: linear-gradient(135deg, #ff69b4, #ff1493);
+    color: white;
+  }
+  
+  #noButton {
+    position: absolute;
+    /* Initial position will be set by JS */
+    background: linear-gradient(135deg, #d6336c, #ff4d6d);
+    color: white;
+  }
+  
+  .btn:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.5);
+  }
+  
+  .response {
+    margin-top: 35px;
+    font-size: 1.6em;
+    font-weight: bold;
+    color: #ff1493;
+    animation: fadeIn 1s ease-in-out;
+  }
+  
+  .hello-kitty-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('hello-kitty1.png') repeat;
+    opacity: 0.15;
+    z-index: -1;
+    animation: backgroundScroll 30s linear infinite;
+  }
+  
+  @keyframes backgroundScroll {
+    from { background-position: 0 0; }
+    to { background-position: 100% 100%; }
+  }
+  
+  .hello-kitty {
+    width: 100px;
+    position: absolute;
+    z-index: 2;
+  }
+  
+  .hello-kitty-left {
+    top: 15px;
+    left: 15px;
+  }
+  
+  .hello-kitty-right {
+    bottom: 15px;
+    right: 15px;
+  }
+  
+  .falling-emojis {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    display: none;
+  }
+  
+  .emoji, .heart {
+    position: absolute;
+    font-size: 2.5em;
+    animation: fall linear infinite;
+  }
+  
+  @keyframes fall {
+    to { transform: translateY(100vh); }
+  }
+  
+  .celebrate {
+    animation: celebrate 1s ease-in-out;
+  }
+  
+  @keyframes celebrate {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.3); }
+    100% { transform: scale(1); }
+  }
+  
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+  
+  @keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-15px); }
+  }
+  
+  @keyframes slideIn {
+    from { transform: translateX(-100%); opacity: 0; }
+    to { transform: translateX(0); opacity: 1; }
+  }
+  
